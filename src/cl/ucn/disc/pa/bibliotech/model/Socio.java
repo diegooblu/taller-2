@@ -90,18 +90,12 @@ public final class Socio {
         this.contrasenia = contrasenia;
     }
 
-    /**
-     * @return el nombre del Socio.
-     */
-    public String getNombre() {
-        return this.nombre;
+    public void setApellido(String apellido) {
+        this.apellido = apellido;
     }
 
-    /**
-     * @return el apellido del Socio.
-     */
-    public String getApellido() {
-        return this.apellido;
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
     }
 
     /**

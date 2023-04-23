@@ -170,8 +170,9 @@ public final class Main {
             StdOut.println("""               
                     [1] Editar correo Electronico
                     [2] Editar Contraseña
+                    [3] Editar Nombre
                                         
-                    [3] Volver atrás
+                    [4] Volver atrás
                     """);
             StdOut.print("Escoja una opción: ");
             opcion = StdIn.readLine();
@@ -179,7 +180,8 @@ public final class Main {
             switch (opcion) {
                 case "1" -> editarCorreo(sistema);
                 case "2" -> cambiarContrasenia(sistema);
-                case "3" -> StdOut.println("Volviendo al menú anterior...");
+                case "3" -> editarNombre(sistema);
+                case "4" -> StdOut.println("Volviendo al menú anterior...");
                 default -> StdOut.println("Opcion no valida, intente nuevamente");
             }
         }
@@ -211,6 +213,22 @@ public final class Main {
         //Se le manda al sistema el nuevo correo electronico del socio para su cambio.
         sistema.nuevoCorreo(nuevoCorreoElectronico);
         StdOut.println("EL correo fue modificado correctamente!");
+    }
+
+    /**
+     * Metodo para edtar nombre y apellido de los Socios
+     *
+     * @param sistema a utilizar.
+     */
+
+    private static void editarNombre(Sistema sistema) {
+        StdOut.print("Ingrese el nuevo nombre que quiera usar: ");
+        String nuevoNombre = StdIn.readLine();
+        StdOut.print("Ingrese el nuevo apellido que quiera usar: ");
+        String nuevoApellido = StdIn.readLine();
+        //Se le manda al sistema el nuevo correo electronico del socio para su cambio.
+        sistema.nuevoNombreCompleto(nuevoNombre, nuevoApellido);
+        StdOut.println("Su nombre fue modificado correctamente!");
     }
 
     /**

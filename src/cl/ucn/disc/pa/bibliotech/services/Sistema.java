@@ -232,6 +232,11 @@ public final class Sistema {
                 + "Correo Electronico: " + this.socio.getCorreoElectronico();
     }
 
+    public void nuevoNombreCompleto(String NombreNuevo, String Apellidonuevo) {
+        socio.setNombre(NombreNuevo);
+        socio.setApellido(Apellidonuevo);
+    }
+
     /**
      * metodo con el cual cambiaremos la contraseña del usuario.
      *
@@ -249,6 +254,7 @@ public final class Sistema {
     public void nuevoCorreo(String correoNuevo) {
         socio.setCorreoElectronico(correoNuevo);
     }
+
 
     /**
      * Metodo para dar y cambiar las calificaciones de los libros.
